@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <style>
+        .banner-desktop{
+            width: 100%;
+        }
+        .blue{
+            color: rgba(15, 15, 183, 0.862);
+        }
+        .bg{
+            background-color: rgb(214, 210, 210);
+        }
+        .form{
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+        .bg-form{
+            background-color: white;
+            border-radius: 15px;
+        }
+        .gray{
+            color: rgb(189, 185, 185);
+        }
+        .black{
+          color: black;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div class="mb-5">
+        <img class="banner-desktop" src="https://caodang.fpt.edu.vn/wp-content/themes/fpoly/assets-custom/images/Banner.png" alt="">
+    </div>
+    <div class="mb-5 ">
+        <h1 class="text-center blue fw-bolder mb-5">PHIẾU ĐĂNG KÝ HỌC</h1>
+        <form action="" class="form bg-form p-5">
+            <h4 class="blue mb-4 fw-bolder">THÔNG TIN THÍ SINH</h4>
+            <div class="row mb-4">
+                <div class=" col-lg-3 col-md-6 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Họ và tên</label>
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="Họ và tên">
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Ngày sinh</label>
+                    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                        <input placeholder="" type="date" id="example" class="form-control p-2">
+                        <i class="fas fa-calendar input-prefix"></i>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Giới tính</label>
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>NAM</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Dân tộc</label>
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="Kinh">
+                  </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
+                <label for="exampleFormControlInput1" class="form-label fw-semibold">Số CCCD/Chứng minh nhân dân</label>
+                <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="0123456789">
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <label for="exampleFormControlInput1" class="form-label fw-semibold">Ngày cấp</label>
+                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                    <input placeholder="" type="date" id="example" class="form-control p-2">
+                    <i class="fas fa-calendar input-prefix"></i>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <label for="exampleFormControlInput1" class="form-label fw-semibold">Nơi cấp</label>
+                <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="0123456789">
+              </div>
+            </div>
+            <div class="row mb-4">
+                <label for="exampleFormControlInput1" class="form-label fw-bolder">Hộ khẩu thường trú (Điền thông tin đầy đủ như trong sổ hộ khẩu)</label>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Chọn tỉnh/thành phố</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Quận/Huyện</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Xã/Phường/Thị trấn</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="Số nhà, đường, ngõ, xóm">
+                  </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Số điện thoại thí sinh</label>
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="0123456789">
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Email thí sinh</label>
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="example@gmail.com">
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Họ tên phụ huynh/người bảo trợ</label>
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="Họ và tên">
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Số điện thoại phụ huynh/người bảo trợ</label>
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="0123456789">
+                  </div>
+            </div>
+            <h4 class="blue mb-4 fw-bolder">THÔNG TIN ĐĂNG KÝ TRƯỜNG CAO ĐẲNG FPT POLYTECHNIC</h4>
+            <div class="row mb-4">
+                <div class="col-lg-6 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Cơ sở nhập học</label>
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Hà Nội</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Nguyện vọng thứ nhất</label>
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Chuyên Ngành</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold"></label>
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Ngành</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Nguyện vọng thứ hai</label>
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Chuyên Ngành</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold"></label>
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Ngành</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-6 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Năm tốt nghiệp THPT hoặc tương đương</label>
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>2023</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label fw-semibold">Trường tốt nghiệp THPT hoặc tương đương</label>
+                    <input type="email" class="form-control p-2" id="exampleFormControlInput1" placeholder="Trường">
+                  </div>
+            </div>
+            <div class="row mb-4">
+                <label for="exampleFormControlInput1" class="form-label fw-semibold">Nơi tốt nghiệp</label>
+                <div class="col-lg-4 col-md-6">
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Chọn tỉnh/thành phố</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Quận/Huyện</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <select class="form-select p-2" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Xã/Phường/Thị trấn</option>
+                      <option value="1">NỮ</option>
+                    </select>
+                  </div>
+                </div>
+                <h4 class="blue mb-4 fw-bolder">THÔNG TIN NHẬN GIẤY BÁO KẾT QUẢ</h4>
+                <div class="row mb-4">
+                    <div class="col-lg-6">
+                        <label for="exampleFormControlInput1" class="form-label fw-semibold">Người nhận</label>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                            <label class="form-check-label gray" for="defaultCheck2">
+                                Thí Sính
+                            </label>
+                          </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                        <label class="form-check-label gray" for="defaultCheck2">
+                            Phụ huynh/Người bảo trợ
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="exampleFormControlInput1" class="form-label fw-semibold">Địa chỉ nhận</label>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                            <label class="form-check-label gray" for="defaultCheck2">
+                                Địa chỉ hộ khẩu thường trú
+                            </label>
+                          </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                        <label class="form-check-label gray" for="defaultCheck2">
+                            Khác
+                        </label>
+                      </div>
+                    </div>
+                </div>
+
+                <h4 class="blue mb-4 fw-bolder">TẢI LÊN GIẤY TỜ XÁC THỰC</h4>
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <label for="exampleFormControlInput1" class="form-label fw-semibold">Ảnh CMT/CCCD mặt trước</label><br>
+                        <p class="gray">(bắt buộc)</p>
+                        <img src="img/cccdmt.png" alt="" class="banner-desktop mb-2">
+                        <input type="file" class="" id="exampleFormControlInput1" placeholder="(bắt buộc)">
+                      </div>
+                      <div class="col-lg-3 col-md-6">
+                        <label for="exampleFormControlInput1" class="form-label fw-semibold">Ảnh CMT/CCCD mặt sau</label><br>
+                        <p class="gray">(bắt buộc)</p>
+                        <img src="img/cccdms.png" alt="" class="banner-desktop mb-2">
+                        <input type="file" class="" id="exampleFormControlInput1" placeholder="(bắt buộc)">
+                      </div>
+                      <div class="col-lg-6 col-md-6">
+                        <label for="exampleFormControlInput1" class="form-label fw-semibold">Bản sao công chứng Bằng tốt nghiệp THPT</label><br>
+                        <p class="gray">Hoặc giấy chứng nhận tốt nghiệp tạm thời (không bắt buộc)</p>
+                        <img src="img/btn.png" alt="" class="banner-desktop mb-2">
+                        <input type="file" class="" id="exampleFormControlInput1" placeholder="(bắt buộc)">
+                      </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="form-check mb-4">
+                        <input class="form-check-input black" type="checkbox" value="" id="defaultCheck2" >
+                        <label class="form-check-label gray" for="defaultCheck2">
+                            Tôi xin cam đoan những lời khai của tôi trên phiếu đăng ký này là đúng sự thật. Nếu sai tôi hoàn toàn chịu trách nhiệm và nhận xử lý theo Quy chế tuyển sinh cao đẳng hiện hành
+                        </label>
+                      </div>
+                  <div class="form-check">
+                    <input class="form-check-input black" type="checkbox" value="" id="defaultCheck2" >
+                    <label class="form-check-label gray" for="defaultCheck2">
+                        Tôi đã đọc kỹ và cam kết tuân thủ Quy định tài chính của nhà trường
+                    </label>
+                  </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-dark p-4">GỬI HỒ SƠ ĐĂNG KÝ</button>
+                </div>
+
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+		.btn-success{
+			background-color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="p-3 text-white rounded-1 mb-3 mt-3 " style="background-color: #18ba88">
+					<span>Lưu điểm danh thành công</span>
+				</div>
+				<div class="p-4 mb-5 bg-body-tertiary border-start border-5  fw-bold  fs-5" style="color: #D64D8F; ">
+					<span class="" style="background: #AFD5FC;">
+						Giảng viên điểm danh bất kỳ vào 15 phút từ khi vào ca học. Tại
+						thời điểm danh mà sinh viên không có mặt tại lớp xem như vắng
+						mặt.
+					</span>
+					<br>
+					<span class="" style="background: #AFD5FC;">
+						Sau đó giảng viên có quyền điểm danh từ có mặt sang vắng mặt các
+						trường hợp vi phạm nội quy lớp học: mất trật tự , ra ngoài không
+						lý do,...
+					</span>
+				</div>
+				<div class="text-end mb-5 ">
+					<button class="btn btn-primary p-2" type="button">Đồng bộ điểm danh với biface</button>
+				</div>
+				<!-- table -->
+				<table class="table">
+					<thead class="table-secondary">
+						<tr class="fw-normal">
+							<td>#</td>
+							<td>Tên lớp</td>
+							<td>Mã sinh viên</td>
+							<td>Tên sinh viên</td>
+							<td>Ảnh</td>
+							<td>Trạng thái</td>
+							<td>Chú thích</td>
+						</tr>
+					</thead>
+					<tbody class="align-middle p-3">
+						<tr scope="row" class="fw-semibold table-p-4" style="color: #46474B;">
+							<td class="fw-bold ">1</td>
+							<td>WE17310</td>
+							<td>PH24274</td>
+							<td>Lê Quý Dương</td>
+							<td class="">
+								<img class="h-50"src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIMAYQMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcCAQj/xABAEAABAwIEAgUJBQUJAAAAAAABAAIDBBEFBhIhMUETIlFxkQcUMmGBobHB0SMzQlJiFSRTcpIWJTVzgrLh8PH/xAAaAQACAwEBAAAAAAAAAAAAAAAAAQMEBQYC/8QAJREAAgICAgEDBQEAAAAAAAAAAAECAxEhBDFRBRMiEhQyM0Ej/9oADAMBAAIRAxEAPwCNREXXHNBERABFhqaqGlaHTyBt+A4k9w5qOlzBTROGuOYNJtq0FRTvrhqTJI1Tl+KJdFAS5layQ6aZ0sfa07qVw/EabEIukpn3t6TTs5veEociubxF7HOmyCy1o2kRFMRBERABERABERABamKV8eHUjppN3HZjL+kVtqgZmxE1mJvDDeGHqM+Z8VV5d/s15XbLHGp92eH0Zm1bqqV0s8pfIeNuXqC8wyshxSnmfECyN4dZywYQx0j9LGkvPCw4K8YRkGetkZUVsmht9mW3XPTsz32bsK9a6IDMGH+aTl1LY0lSOlhcBwB5Ktw1c9DVCaF5jmafH1HtC7vieWaWpwuOmOxhbZhHJcYzVg8+FVrmyt+zJ2cBsvMbGmepV6Lfg2JR4pRidlmvG0jL+ifot5c6y1iJw/E2ajaCUhknyPsXRV0fDv8Aery+0YPKp9qeumERFaKwREQAREQBqYrU+aYdPMPSaw6e9czb1nDifUOJKvObpg2hERv1nN+N/ko3L+Fw1eLYGaemc2NzgJ5DJqa94Bdttt6J2WH6lZmxR8Gx6fX8G/Jdci5ZNPTR1FW0CV29jyV/YWRsDWuGyquP0Pm8MksGH+cvILutKWg2HAb8UyuKiVgvTS0xcLmJ7y63Z/4sk1sFolkbpN3BVHOeDjEcMm0AF4FwtjMMUpY8Oimm0A6Yon6dZtfiobB6Y1ulz8LlpHcWnpHcAefNIeDkUrDG9zHghzTYg8l0vAas1uE007jd5bpf3jY/BVfO9DHRZknDWgsewSOF7WJB+iksiy6sPnhPFkt/YR/wVq+mzxbjyjJ9Qh/nnwyyoiLeMYIiIAIiIAqmcn9eFnLrO9wXnyc1IZjUEEhdZsnSRi+wNi13uIWLOB/f2jk2L3klQVLLLRzw1UPpxSBw5XtyXOc3d0jd4fxrifpMFksdngEdhSmbBE7TG1re0qEwvEW1tDBUwP1RysDmnvXnFazD44mCoxNtK9rrkdJYk+sKhnBppfV0SszoZKt7HgOB3Cxz9DBERG1o9iruG1+GMqXmLFm1D3O9AyXAJ22C3cSqtMJLiAALknklnJ6awcs8ocrZcdeQbu6NrCOy2/zXrIrrTVrP0sPxVfxOr/aGLVFTykeS0/p5e5TWSHH9p1De2G/gR9Vf4OromXzPlXIuiIi6QwQiIgAiL45wa0udwAuUAUzM9pcVk7AGtCh+q9kh5B1gpXGyXVUzvxAb/wA1j81GRtBpT26rj2Lmr3m2TN+lYrSLp5MsRqGQ1dK864IXhzW823vf2LoEtNTV0WoODXfmtuqH5PKGaklmM7C1k7GSRE/iaeYVwlhcwkxuLe5UpLZfqeEj43D6WhcZ3uD3DgSBsqBn/Mj5HnDaYaWOF5X9o/KPUrjUwyzA63k24XVKxPLU+K1WIT05JfTxNc0fnNzt4Igsywh3SbWWynR2B/0lT2SP8VkPbCfiFANBBIPYVYcjD+8puwRH4hX+J++Jncn9Ui7oiLozBCIiAC0cWrmUVI5xBc51mho9fb2LoGEZTiaxsuJkvkO/RNPVb3kcfh3qnZ2ZHV5hdh0MbY8Pwym6Z7I7AOlcLNv3DfxWffzUk1Dsv08NtqUyg1Ly+Q6uMgId7TdajwYxbtKyVUpeZHniHX9iROErNL/SA2KxW8molg6xl+shqcvYJFK3TVmEaCOBZ2+O3ipwUxc3fdV7J2HsrMLoZXgnoadsTf02udvFXOOldHHc735p2VprJJCWNEBWUz9JDWqMbI/CGxPEYLZ5P3jq/g4X9VuKuErGRsdJKLtHAdp7FHGj87JdM0EOPDkPUvNMMP6j1ZLOjm+aMj1UtZJXYOGSRS2cWA2BvzB8FG5SoamhxOtirIJIZWMaNEjbHifFdnoaV1OOjAvEPRB5LefSwzsDZYmPba1nC6tVNV2KZVtg5wcTmqK44hlWCW76J5hd+Q7t+oVYrsPqaCTRUxlvY4btPtW3VyK7OnsxrKJ19rRqovtx2jxRS7IjqrnXXNs6w/s+ux6pNtNVRwkH9QfpPut4ro1+t7FV8/YQ7FcCqejBM7G3aBzAcCR7vcuba0dEcN09Yg8Xt37/APpWN7XQE+q4+az04Dq2Bj9vtWggjtdZSOZKMRY5WU0Q2icT3ANF/iosaGdb8n8GnL9KSPSYCrU6P7I7gC26iMnxhuXqEEWPQtuPYpeqBfG2Jv4j1u5TLwIjCH1kwNrQs2YPmVvRwNYOCyxRNYNgsmlHQ+zEG3NhwXsCwXuwAXniUxM+OIZG57uAF1GTU7K2LRO0ObI0l1+S2MUl+zbE3i879y8TP6GMNbvI7YBCeHlA0msMhf7MUP8AEqf6h9EUn5o/+K/+pFL9zb5Ift6vBItOpw7tys3RNc0jYharT11sR7KIlKBmjydxVcr6vDXdHUF+vR+Fx4/XxWbCMkk4nU1+JO1ySscwjkQ7ir8AvuwXnCGjToKKHD6VsMLbMaLALNH13C/tSUl3VaskQDBvx5JoGeRdZLLy0+peroA8u3Xh7gxq9OcAtKql2KBGpPJrrAb30he4LySumPLZq0mv1TSgbkWF1vt+zpjbkEdno+6z+ZfVo+bydpRAEk37xZ2oiZ5NhhXxyIkNGJ2wXuM7N/lRE0JnpiHiiJDRik4FR1TzREMZoU338/8Amj/a1SM33J7wiIQf0yIiJiP/2Q=="
+									alt="" class="img-fluid" />
+							</td>
+							<td>
+								<div class="btn-group btn-toggle border border-1 " style="width: 250px; height: 50px;">
+									<button class="btn  btn-sm btn-success border border-1 text-white active ">Có Mặt</button>
+									<button class="btn btn-sm  btn-default border border-1 text-white">Vắng Mặt</button>
+								</div>
+							</td>
+							</td>
+							<td>
+								<input type="text" class="form-control  ">
+							</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.btn-toggle').click(function () {
+        $(this).find('.btn').toggleClass('active');// toggle active class on button
+        if ($(this).find('.btn-success').length > 0) { // check if success button is active
+          $(".btn-default").addClass("btn-danger"); // toggle button classes
+				}
+				if ($(this).find('.btn-default').length > 0) { // check if default button is active
+					$(".btn-danger").addClass("btn-success"); // toggle button classes
+				}
+        
+      });
+    });
+  </script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"ZKt7HgOB3Cxz9DBERG1o9iruG1+GMqXmLFm1D3O9AyXAJ22C3cSqtMJLiAALknklnJ6awcs8ocrZcdeQbu6NrCOy2/zXrIrrTVrP0sPxVfxOr/aGLVFTykeS0/p5e5TWSHH9p1De2G/gR9Vf4OromXzPlXIuiIi6QwQiIgAiL45wa0udwAuUAUzM9pcVk7AGtCh+q9kh5B1gpXGyXVUzvxAb/wA1j81GRtBpT26rj2Lmr3m2TN+lYrSLp5MsRqGQ1dK864IXhzW823vf2LoEtNTV0WoODXfmtuqH5PKGaklmM7C1k7GSRE/iaeYVwlhcwkxuLe5UpLZfqeEj43D6WhcZ3uD3DgSBsqBn/Mj5HnDaYaWOF5X9o/KPUrjUwyzA63k24XVKxPLU+K1WIT05JfTxNc0fnNzt4Igsywh3SbWWynR2B/0lT2SP8VkPbCfiFANBBIPYVYcjD+8puwRH4hX+J++Jncn9Ui7oiLozBCIiAC0cWrmUVI5xBc51mho9fb2LoGEZTiaxsuJkvkO/RNPVb3kcfh3qnZ2ZHV5hdh0MbY8Pwym6Z7I7AOlcLNv3DfxWffzUk1Dsv08NtqUyg1Ly+Q6uMgId7TdajwYxbtKyVUpeZHniHX9iROErNL/SA2KxW8molg6xl+shqcvYJFK3TVmEaCOBZ2+O3ipwUxc3fdV7J2HsrMLoZXgnoadsTf02udvFXOOldHHc735p2VprJJCWNEBWUz9JDWqMbI/CGxPEYLZ5P3jq/g4X9VuKuErGRsdJKLtHAdp7FHGj87JdM0EOPDkPUvNMMP6j1ZLOjm+aMj1UtZJXYOGSRS2cWA2BvzB8FG5SoamhxOtirIJIZWMaNEjbHifFdnoaV1OOjAvEPRB5LefSwzsDZYmPba1nC6tVNV2KZVtg5wcTmqK44hlWCW76J5hd+Q7t+oVYrsPqaCTRUxlvY4btPtW3VyK7OnsxrKJ19rRqovtx2jxRS7IjqrnXXNs6w/s+ux6pNtNVRwkH9QfpPut4ro1+t7FV8/YQ7FcCqejBM7G3aBzAcCR7vcuba0dEcN09Yg8Xt37/APpWN7XQE+q4+az04Dq2Bj9vtWggjtdZSOZKMRY5WU0Q2icT3ANF/iosaGdb8n8GnL9KSPSYCrU6P7I7gC26iMnxhuXqEEWPQtuPYpeqBfG2Jv4j1u5TLwIjCH1kwNrQs2YPmVvRwNYOCyxRNYNgsmlHQ+zEG3NhwXsCwXuwAXniUxM+OIZG57uAF1GTU7K2LRO0ObI0l1+S2MUl+zbE3i879y8TP6GMNbvI7YBCeHlA0msMhf7MUP8AEqf6h9EUn5o/+K/+pFL9zb5Ift6vBItOpw7tys3RNc0jYharT11sR7KIlKBmjydxVcr6vDXdHUF+vR+Fx4/XxWbCMkk4nU1+JO1ySscwjkQ7ir8AvuwXnCGjToKKHD6VsMLbMaLALNH13C/tSUl3VaskQDBvx5JoGeRdZLLy0+peroA8u3Xh7gxq9OcAtKql2KBGpPJrrAb30he4LySumPLZq0mv1TSgbkWF1vt+zpjbkEdno+6z+ZfVo+bydpRAEk37xZ2oiZ5NhhXxyIkNGJ2wXuM7N/lRE0JnpiHiiJDRik4FR1TzREMZoU338/8Amj/a1SM33J7wiIQf0yIiJiP/2Q=="
+  alt="" class="img-fluid" />
+</td>
+<td>
+<div class="btn-group btn-toggle border border-1 " style="width: 250px; height: 50px;">
+  <button class="btn  btn-sm btn-success border border-1 text-white active ">Có Mặt</button>
+  <button class="btn btn-sm  btn-default border border-1 text-white">Vắng Mặt</button>
+</div>
+</td>
+</td>
+<td>
+<input type="text" class="form-control  ">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(document).ready(function () {
+$('.btn-toggle').click(function () {
+$(this).find('.btn').toggleClass('active');// toggle active class on button
+if ($(this).find('.btn-success').length > 0) { // check if success button is active
+$(".btn-default").addClass("btn-danger"); // toggle button classes
+}
+if ($(this).find('.btn-default').length > 0) { // check if default button is active
+$(".btn-danger").addClass("btn-success"); // toggle button classes
+}
+
+});
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"ZKt7HgOB3Cxz9DBERG1o9iruG1+GMqXmLFm1D3O9AyXAJ22C3cSqtMJLiAALknklnJ6awcs8ocrZcdeQbu6NrCOy2/zXrIrrTVrP0sPxVfxOr/aGLVFTykeS0/p5e5TWSHH9p1De2G/gR9Vf4OromXzPlXIuiIi6QwQiIgAiL45wa0udwAuUAUzM9pcVk7AGtCh+q9kh5B1gpXGyXVUzvxAb/wA1j81GRtBpT26rj2Lmr3m2TN+lYrSLp5MsRqGQ1dK864IXhzW823vf2LoEtNTV0WoODXfmtuqH5PKGaklmM7C1k7GSRE/iaeYVwlhcwkxuLe5UpLZfqeEj43D6WhcZ3uD3DgSBsqBn/Mj5HnDaYaWOF5X9o/KPUrjUwyzA63k24XVKxPLU+K1WIT05JfTxNc0fnNzt4Igsywh3SbWWynR2B/0lT2SP8VkPbCfiFANBBIPYVYcjD+8puwRH4hX+J++Jncn9Ui7oiLozBCIiAC0cWrmUVI5xBc51mho9fb2LoGEZTiaxsuJkvkO/RNPVb3kcfh3qnZ2ZHV5hdh0MbY8Pwym6Z7I7AOlcLNv3DfxWffzUk1Dsv08NtqUyg1Ly+Q6uMgId7TdajwYxbtKyVUpeZHniHX9iROErNL/SA2KxW8molg6xl+shqcvYJFK3TVmEaCOBZ2+O3ipwUxc3fdV7J2HsrMLoZXgnoadsTf02udvFXOOldHHc735p2VprJJCWNEBWUz9JDWqMbI/CGxPEYLZ5P3jq/g4X9VuKuErGRsdJKLtHAdp7FHGj87JdM0EOPDkPUvNMMP6j1ZLOjm+aMj1UtZJXYOGSRS2cWA2BvzB8FG5SoamhxOtirIJIZWMaNEjbHifFdnoaV1OOjAvEPRB5LefSwzsDZYmPba1nC6tVNV2KZVtg5wcTmqK44hlWCW76J5hd+Q7t+oVYrsPqaCTRUxlvY4btPtW3VyK7OnsxrKJ19rRqovtx2jxRS7IjqrnXXNs6w/s+ux6pNtNVRwkH9QfpPut4ro1+t7FV8/YQ7FcCqejBM7G3aBzAcCR7vcuba0dEcN09Yg8Xt37/APpWN7XQE+q4+az04Dq2Bj9vtWggjtdZSOZKMRY5WU0Q2icT3ANF/iosaGdb8n8GnL9KSPSYCrU6P7I7gC26iMnxhuXqEEWPQtuPYpeqBfG2Jv4j1u5TLwIjCH1kwNrQs2YPmVvRwNYOCyxRNYNgsmlHQ+zEG3NhwXsCwXuwAXniUxM+OIZG57uAF1GTU7K2LRO0ObI0l1+S2MUl+zbE3i879y8TP6GMNbvI7YBCeHlA0msMhf7MUP8AEqf6h9EUn5o/+K/+pFL9zb5Ift6vBItOpw7tys3RNc0jYharT11sR7KIlKBmjydxVcr6vDXdHUF+vR+Fx4/XxWbCMkk4nU1+JO1ySscwjkQ7ir8AvuwXnCGjToKKHD6VsMLbMaLALNH13C/tSUl3VaskQDBvx5JoGeRdZLLy0+peroA8u3Xh7gxq9OcAtKql2KBGpPJrrAb30he4LySumPLZq0mv1TSgbkWF1vt+zpjbkEdno+6z+ZfVo+bydpRAEk37xZ2oiZ5NhhXxyIkNGJ2wXuM7N/lRE0JnpiHiiJDRik4FR1TzREMZoU338/8Amj/a1SM33J7wiIQf0yIiJiP/2Q=="
+									alt="" class="img-fluid" />
+							</td>
+							<td>
+								<div class="btn-group btn-toggle border border-1 " style="width: 250px; height: 50px;">
+									<button class="btn  btn-sm btn-success border border-1 text-white active ">Có Mặt</button>
+									<button class="btn btn-sm  btn-default border border-1 text-white">Vắng Mặt</button>
+								</div>
+							</td>
+							</td>
+							<td>
+								<input type="text" class="form-control  ">
+							</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.btn-toggle').click(function () {
+        $(this).find('.btn').toggleClass('active');// toggle active class on button
+        if ($(this).find('.btn-success').length > 0) { // check if success button is active
+          $(".btn-default").addClass("btn-danger"); // toggle button classes
+				}
+				if ($(this).find('.btn-default').length > 0) { // check if default button is active
+					$(".btn-danger").addClass("btn-success"); // toggle button classes
+				}
+        
+      });
+    });
+  </script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
