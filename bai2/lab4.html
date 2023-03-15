@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="myctrl">
+        <!-- <img src="image/{{student.image}}" alt="" width="200"> -->
+        <!-- <ul>
+            <li>Name: {{name}}</li>
+            <li>date of birth: {{birth}}</li>
+            <li>gender: {{gender}}</li>
+            <li>mark: {{mark}}</li>
+        </ul> -->
+        <!-- <ul>
+            <li>Name: {{student.name}}</li>
+            <li>date of birth: {{student.birth}}</li>
+            <li>gender: {{student.gender}}</li>
+            <li>mark: {{student.mark}}</li>
+        </ul> -->
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">image</th>
+                <th scope="col">name</th>
+                <th scope="col">birth</th>
+                <th scope="col">gender</th>
+                <th scope="col">mark</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="i in student">
+                <td><img src="image/{{i.image}}" alt="" width="100"></td>
+                <td>{{i.name}}</td>
+                <td>{{i.birth}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.mark}}</td>
+              </tr>     
+               
+            </tbody>
+          </table>
+        <script>
+            var app = angular.module("myapp",[]);
+            // bai1
+            // app.controller("myctrl",function($scope) {
+            //     $scope.name = "ng huu duy";
+            //     $scope.birth = "1-10-2003";
+            //     $scope.gender = "Nam";
+            //     $scope.image = "it.png";
+            //     $scope.mark = 8.5;
+            // })
+
+            //bai2
+            app.controller("myctrl",function($scope) {
+                $scope.student = [{
+                    name: "ng huu duy",
+                    birth: "1-10-2003",
+                    gender: "nam",
+                    image: "it.png",
+                    mark:8.5
+                },
+                {
+                    name: "ng huu a",
+                    birth: "1-10-2004",
+                    gender: "girl",
+                    image: "it.png",
+                    mark:8.5
+                },
+              ]
+            })
+        </script>
+    </div>
+
+</body>
+
+</html>
