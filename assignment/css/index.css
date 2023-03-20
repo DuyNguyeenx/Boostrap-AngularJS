@@ -6,7 +6,45 @@ body {
     font-family: "Poppins", sans-serif;
     color: #444444;
 }
-
+.mr{
+    margin-right: 30px;
+}
+footer {
+    color: #666;
+  }
+  
+  footer h5 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  footer ul li a {
+    color: #666;
+  }
+  
+  footer ul li a:hover {
+    color: #333;
+  }
+  
+  footer .form-label {
+    font-weight: bold;
+  }
+  
+  footer .input-group button {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+  }
+  
+  footer .input-group button:hover {
+    background-color: #187bcd;
+    border-color: #187bcd;
+  }
+  
+  @media (max-width: 767px) {
+    footer .text-end {
+      text-align: center !important;
+    }
+  }
 a,
 a:hover {
     text-decoration: none;

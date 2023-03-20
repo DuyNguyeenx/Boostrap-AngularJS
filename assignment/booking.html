@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đặt phòng khách sạn</title>
+    <!-- CSS của Bootstrap -->
+    <link rel="stylesheet" href="css/index.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Booking Hotel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse " id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Trang chủ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Đặt Phòng</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Liên hệ</a>
+					</li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse " id="navbarNav">
+				<ul class=" navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Đăng nhập</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Đăng ký</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+       
+    </nav>
+
+    <!-- Banner hình ảnh -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="text-center">
+            <img src="img/banner.jpg" alt="" class="banner">
+        </div>
+        <div class="container">
+            <h1 class="display-4">Đặt phòng khách sạn</h1>
+            <p class="lead">Tận hưởng kỳ nghỉ của bạn với chúng tôi</p>
+        </div>
+    </div>
+   <!-- Page content -->
+	<div class="container mb-5">
+        <div class="row mt-5">
+          <div class="col-md-6 mx-auto">
+            <h2>Book a Room</h2>
+            <hr>
+            <form>
+                <div class="mb-3">
+                    <label for="checkin" class="form-label">FullName</label>
+                    <input type="text" class="form-control" id="checkin" name="fullname" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkin" class="form-label">CCCD</label>
+                    <input type="text" class="form-control" id="checkin" name="cccd" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkin" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="checkin" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkin" class="form-label mr">Gender</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Boy</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Girl</label>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkin" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="checkin" name="phone" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkin" class="form-label">Date of birth</label>
+                    <input type="date" class="form-control" id="checkin" name="checkin" required>
+                  </div>
+              <div class="mb-3">
+                <label for="checkin" class="form-label">Check-In Date</label>
+                <input type="date" class="form-control" id="checkin" name="checkin" required>
+              </div>
+              <div class="mb-3">
+                <label for="checkout" class="form-label">Check-Out Date</label>
+                <input type="date" class="form-control" id="checkout" name="checkout" required>
+              </div>
+              <div class="mb-3">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input type="number" class="form-control" id="guests" name="guests" min="1" max="10" required>
+              </div>
+              <div class="mb-3">
+                <label for="roomtype" class="form-label">Select Room</label>
+                <select class="form-control" id="roomtype" name="roomtype" required>
+                  <option value="">Select a Room</option>
+                  <option value="standard">Standard</option>
+                  <option value="deluxe">Deluxe</option>
+                  <option value="suite">Suite</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="roomtype" class="form-label">Hình thức thanh toán</label>
+                <select class="form-control" id="roomtype" name="roomtype" required>
+                  <option value="">Tiền mặt</option>
+                  <option value="standard">Thanh toán bằng thẻ ngân hàng</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-danger mr">Reset</button>
+
+              <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h5>About Us</h5>
+              <p>Khách hàng sẽ được tận hưởng cảm nhận những khoảng khắc tuyệt vời nhất từ chúng tối</p>
+            </div>
+            <div class="col-md-3">
+              <h5>Useful Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Contact Us</h5>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Main St, New York, NY 10001</li>
+                <li><i class="fas fa-phone"></i>0964.678.184</li>
+                <li><i class="fas fa-envelope"></i> duynhph24103@fpt.edu.vn</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Newsletter</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Enter your email address to subscribe to our newsletter:</label>
+                  <div class="input-group">
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+                <p>© 2023 Booking Hotel. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                <li class="list-inline-item"><a href="#">Site Map</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Script của Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

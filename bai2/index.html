@@ -11,12 +11,12 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script></head>
 
-<body ng-app="myapp">
+<body ng-app="myapp" class="container">
     <!-- <div ng-controller="demoController">
-        {{ welcome }}
+        <h2 ng-bind="welcome"></h2>
     </div> -->
     <div ng-controller="infoController">
-        <table class="table">
+        <!-- <table class="table">
             <thead>
               <tr>
                 <th scope="col">First</th>
@@ -34,36 +34,73 @@
                
             </tbody>
           </table>
+          <input type="text" ng-model="test" name="" id="">
+          <select name="" id="" ng-model="city">
+            <option value="1">hp</option>
+            <option value="2">hn</option>
+            <option value="3">bn</option>
+          </select>
+          nam <input type="radio" ng-model="gioitinh" value="0" id="">
+          nu <input type="radio" ng-model="gioitinh" value="1" id=""><br>
+          <h2> {{hihi}} </h2>
+          <button ng-click="sayHello()">Test</button>
+          <h3 ng-mousemove="myMouse()">di chuot vao day</h3>
+          <h5>{{ count }}</h5> -->
+
+          <div class="mb-3">
+            <label  class="form-label">Ho va ten</label>
+            <input type="text" ng-model="name" class="form-control"  placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Nam sinh</label>
+            <input type="text" ng-model="namsinh" class="form-control"  placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Nam sinh</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" ng-model="gioitinh" type="radio"  value="nam">
+              <label class="form-check-label" >NAM</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" ng-model="gioitinh"  value="nu">
+              <label class="form-check-label" >NU</label>
+            </div>
+          </div>
+          <button type="button" ng-click="button()" class="btn btn-primary">Primary</button>
+          <h3>{{traloi}}</h3>
     </div>
 
-</body>
-<script>
-    function myFunc($scope) { //tất cả các hàm để phải có tham số mặc định $scope
-        // xử lý việc render dữ liệu ra khu vực sẽ sử dụng angular js
-        $scope.welcome = "hello world"
-    }
     
-    //khởi tạp angular js và định nghĩa vùng để sử dụng angular js
-    var app = angular.module("myapp", [])
-    //map demoController với hàm myFunc để xử lý render dữ liệu ra
-    app.controller("demoController", myFunc)
-    app.controller("infoController",function($scope){
-        $scope.info= [
-            {
-        name:"duyng",
-        age:"20",
-        phone:"0964678184"
-        },{
-        name:"ng van a",
-        age:"21",
-        phone:"0964678***"
-        },{
-        name:"ng van c",
-        age:"22",
-        phone:"0964***184"
-        }
-    ];
-    })
+
+
+</body>
+<script src="app.js">
+    // function myFunc($scope) { //tất cả các hàm để phải có tham số mặc định $scope
+    //     // xử lý việc render dữ liệu ra khu vực sẽ sử dụng angular js
+    //     $scope.welcome = "hello world"
+    // }
+    
+    // //khởi tạp angular js và định nghĩa vùng để sử dụng angular js
+    // var app = angular.module("myapp", [])
+    // //map demoController với hàm myFunc để xử lý render dữ liệu ra
+    // app.controller("demoController", myFunc)
+    // app.controller("infoController",function($scope){
+    //     $scope.info= [
+    //         {
+    //     name:"duyng",
+    //     age:"20",
+    //     phone:"0964678184"
+    //     },{
+    //     name:"ng van a",
+    //     age:"21",
+    //     phone:"0964678***"
+    //     },{
+    //     name:"ng van c",
+    //     age:"22",
+    //     phone:"0964***184"
+    //     }
+    // ];
+    // })
     
 </script>
 

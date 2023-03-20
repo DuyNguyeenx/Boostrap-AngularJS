@@ -1,0 +1,17 @@
+<div class="mb-3">
+    <label class="form-label">Chiều dài</label>
+    <input ng-model="length" type="text" class="form-control">
+</div>
+<div class="mb-3">
+    <label class="form-label">Chiều rộng</label>
+    <input ng-model="width" type="text" class="form-control">
+</div>
+<div class="mb-3">
+    <label class="form-label">Diện tích</label>
+    <div ng-bind="dientich" class="form-control">{{dientich}} </d>
+</div>
+<div class="mb-3">
+    <label class="form-label">Chu vi</label>
+    <div ng-bind="chuvi" class="form-control">{{chuvi}} </div>
+</div>
+<button type="button" ng-click="calculate()" class="btn btn-info">Calculate</button>

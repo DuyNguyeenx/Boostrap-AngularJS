@@ -1,0 +1,21 @@
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">image</th>
+            <th scope="col">name</th>
+            <th scope="col">birth</th>
+            <th scope="col">gender</th>
+            <th scope="col">mark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="i in student">
+            <td><img src="/bai2/image/{{i.image}}" alt="" width="100"></td>
+            <td>{{i.name}}</td>
+            <td>{{i.birth}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.mark}}</td>
+          </tr>     
+           
+        </tbody>
+      </table>
