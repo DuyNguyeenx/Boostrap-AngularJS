@@ -1,0 +1,3 @@
+window.BookingController = function($scope) {
+    
+}
