@@ -4,7 +4,7 @@ window.Bai5Controller = function($scope) {
     var a = parseFloat($scope.student.mark);
     if(a>=0 && a<5){
         $scope.student.grade = "Failed";
-    }else if(a<=10){
+    }else if(a>=5 && a<=10){
         $scope.student.grade = "Passed";
     }else{
         $scope.student.grade = "Nhap sai"

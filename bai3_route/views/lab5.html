@@ -1,0 +1,48 @@
+<div class="container mt-2  ">
+  <h3 class="text-center mt-3" >Thong tin bao hiem FPTcare cua {{chucVu}} </h3>
+    <div class="mb-3">
+        <label class="form-label">Ho ten</label>
+        <input type="text" class="form-control" ng-model="user.name">
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.name==true">
+          Vui lòng nhập tên!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Gioi Tinh</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" ng-model="user.gender" value="nam">
+            <label class="form-check-label" for="inlineRadio1">Nam</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" ng-model="user.gender" value="nu">
+            <label class="form-check-label" for="inlineRadio2">Nu</label>
+          </div>
+          <div class="alert alert-danger" role="alert" ng-if="kiemTra.gender==true">
+            Vui lòng chọn giới tính!
+          </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Bac</label>
+        <select class="form-select" ng-model="user.step">
+            <option value="bac1">Bac 1</option>
+            <option value="bac2">Bac 2</option>
+            <option value="bac3">Bac 3</option>
+          </select>
+          <div class="alert alert-danger" role="alert" ng-if="kiemTra.step==true">
+            Vui lòng chọn bậc lương!
+          </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">So Ngay lam</label>
+        <input type="number" class="form-control" ng-model="user.work" >
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.work==true">
+          Vui lòng nhập số ngày làm!
+        </div>
+      </div>
+<div class="text-center">
+    <button type="button" class="btn btn-primary text-center mb-2" ng-click="submit()">Kiem tra</button>
+</div>
+<div class="fs-3 fw-semibold alert alert-secondary mb-5" role="alert" >
+  {{traLoi}}
+</div>
+    </div>
