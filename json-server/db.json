@@ -1,0 +1,194 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "nana",
+      "author": "nana"
+    },
+    {
+      "ten": "wwwww",
+      "tuoi": "wwwuuuww",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "ten": "4444",
+      "tuoi": "3333"
+    },
+    {
+      "id": 5,
+      "ten": "2222",
+      "tuoi": "2222"
+    },
+    {
+      "ten": "wwtttaâ",
+      "tuoi": "wwwttttaaa",
+      "id": 6
+    },
+    {
+      "ten": "2222",
+      "tuoi": "222",
+      "id": 7
+    },
+    {
+      "ten": "222",
+      "tuoi": "222",
+      "id": 8
+    },
+    {
+      "ten": "999",
+      "tuoi": "1999",
+      "id": 9
+    },
+    {
+      "ten": "222",
+      "tuoi": "222",
+      "id": 10
+    },
+    {
+      "ten": "222555",
+      "id": 11
+    },
+    {
+      "ten": "eeee",
+      "tuoi": "eee",
+      "id": 12
+    },
+    {
+      "ten": "ggg",
+      "tuoi": "ggg",
+      "id": 13
+    },
+    {
+      "ten": "hhh",
+      "tuoi": "jjjj",
+      "id": 14
+    },
+    {
+      "ten": "hhhh",
+      "tuoi": "hhh",
+      "id": 15
+    },
+    {
+      "ten": "kkk",
+      "tuoi": "ggg",
+      "id": 16
+    },
+    {
+      "ten": "ukm",
+      "tuoi": "ukm",
+      "id": 17
+    },
+    {
+      "ten": "nanâ",
+      "tuoi": "nana",
+      "id": 18
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": 1,
+      "ten": "Tee Gucci",
+      "tuoi": 500
+    },
+    {
+      "id": 2,
+      "ten": "Tee ",
+      "tuoi": 50
+    },
+    {
+      "ten": "versace",
+      "tuoi": "50",
+      "id": 3
+    },
+    {
+      "ten": "Cardigan",
+      "tuoi": "60",
+      "id": 4
+    },
+    {
+      "ten": "dior",
+      "tuoi": "45",
+      "id": 5
+    }
+  ],
+  "thithu": [
+    {
+      "id": 1,
+      "name": "Tee ysl",
+      "price": 5000,
+      "categoryName": "Saint laurent"
+    },
+    {
+      "name": "Tee Gucci",
+      "price": 6000,
+      "categoryName": "gucci",
+      "id": 2
+    },
+    {
+      "name": "Tee D&G",
+      "price": 2222,
+      "categoryName": "Dolce",
+      "id": 3
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Tee ysl",
+      "cccd": "2647812",
+      "email": "duy@gmail.com",
+      "gender": "nam",
+      "phone": "0964678184",
+      "birth": "2003-4-6",
+      "checkin": "2023-4-6",
+      "checkout": "2023-4-1",
+      "guest": 6,
+      "room": "Standard (Tiêu Chuẩn)",
+      "pay": "Tiền mặt"
+    },
+    {
+      "name": "duy",
+      "cccd": "4466122365",
+      "email": "duyng@gmail.com",
+      "gender": "nam",
+      "phone": "0964123789",
+      "birth": "2003-04-05T17:00:00.000Z",
+      "checkin": "2023-04-05T17:00:00.000Z",
+      "checkout": "2023-04-05T17:00:00.000Z",
+      "guest": 2,
+      "room": "standard",
+      "pay": "standard",
+      "id": 2
+    },
+    {
+      "name": "Cao Nam",
+      "cccd": "03658456",
+      "email": "dasds@gmail.com",
+      "gender": "Nam",
+      "phone": "0365456123",
+      "birth": "2009-03-01T17:00:00.000Z",
+      "checkin": "2023-04-03T17:00:00.000Z",
+      "checkout": "2023-04-05T17:00:00.000Z",
+      "guest": 6,
+      "room": "Standard (Tiêu Chuẩn)",
+      "pay": "Tiền mặt",
+      "id": 3
+    }
+  ]
+}

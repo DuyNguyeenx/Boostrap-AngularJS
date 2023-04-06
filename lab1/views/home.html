@@ -1,0 +1,344 @@
+<form action="" class="form bg-form p-5">
+  <h4 class="blue mb-4 fw-bolder">THÔNG TIN THÍ SINH</h4>
+  <div class="row mb-4">
+    <div class=" col-lg-3 col-md-6 mb-4">
+      <label class="form-label fw-semibold">Họ và tên</label>
+      <input type="text" class="form-control p-2" ng-model="user.ten" placeholder="Họ và tên">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.ten==false">
+        Vui lòng nhập tên!
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label fw-semibold">Ngày sinh</label>
+      <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+        <input placeholder="" type="date" ng-model="user.birth" class="form-control p-2">
+        <i class="fas fa-calendar input-prefix"></i>
+      </div>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.birth==false">
+        Vui lòng nhập ngày sinh!
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label fw-semibold">Giới tính</label>
+      <select class="form-select p-2" ng-model="user.gender">
+        <option></option>
+        <option selected>NAM</option>
+        <option>NỮ</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.gender==false">
+        Vui lòng chọn giới tinh!
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label fw-semibold">Dân tộc</label>
+      <input type="text" class="form-control p-2" ng-model="user.dantoc" placeholder="Kinh">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.dantoc==false">
+        Vui lòng nhập dân tộc!
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <label class="form-label fw-semibold">Số CCCD/Chứng minh nhân dân</label>
+      <input type="number" class="form-control p-2" ng-model="user.cccd" placeholder="0123456789">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.cccd==false">
+        Vui lòng nhập CCCD!
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <label class="form-label fw-semibold">Ngày cấp</label>
+      <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+        <input placeholder="" type="date" ng-model="user.ngaycap" class="form-control p-2">
+        <i class="fas fa-calendar input-prefix"></i>
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.ngaycap==false">
+          Vui lòng nhập ngày cấp!
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <label class="form-label fw-semibold">Nơi cấp</label>
+      <input type="text" class="form-control p-2" ng-model="user.noicap">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.noicap==false">
+        Vui lòng nhập nơi cấp!
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <label class="form-label fw-bolder">Hộ khẩu thường trú (Điền thông tin đầy đủ như
+      trong sổ hộ khẩu)</label>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <select class="form-select p-2" ng-model="user.hktt1">
+        <option selected value="">Chọn tỉnh/thành phố</option>
+        <option>HN</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.hktt1==false">
+        Hãy chọn tỉnh/thành phố
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <select class="form-select p-2" ng-model="user.hktt2">
+        <option selected value="">Quận/Huyện</option>
+        <option>hk</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.hktt2==false">
+        Hãy chọn quận/huyện
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <select class="form-select p-2" ng-model="user.hktt3">
+        <option value="" selected>Xã/Phường/Thị trấn</option>
+        <option>yên sở</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.hktt3==false">
+        Hãy chọn xã/phường/thị trấn
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <input type="text" class="form-control p-2" ng-model="user.sonha" placeholder="Số nhà, đường, ngõ, xóm">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.sonha==false">
+        Vui lòng nhập số nhà!
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <label class="form-label fw-semibold">Số điện thoại thí sinh</label>
+      <input type="number" class="form-control p-2" ng-model="user.phoneSV" placeholder="0123456789">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.phoneSV==false">
+        Vui lòng nhập sđt thí sinh!
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <label class="form-label fw-semibold">Email thí sinh</label>
+      <input type="email" class="form-control p-2" ng-model="user.email" placeholder="example@gmail.com">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.email==false">
+        Vui lòng nhập email thí sinh!
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <label class="form-label fw-semibold">Họ tên phụ huynh/người bảo trợ</label>
+      <input type="text" class="form-control p-2" ng-model="user.tenPH" placeholder="Họ và tên">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.tenPH==false">
+        Vui lòng nhập họ tên phụ huynh/người bảo trợ!
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <label class="form-label fw-semibold">Số điện thoại phụ huynh/người bảo trợ</label>
+      <input type="email" class="form-control p-2" ng-model="user.phonePH" placeholder="0123456789">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.phonePH==false">
+        Vui lòng nhập số điện thoại phụ huynh/người bảo trợ!
+      </div>
+    </div>
+  </div>
+  <h4 class="blue mb-4 fw-bolder">THÔNG TIN ĐĂNG KÝ TRƯỜNG CAO ĐẲNG FPT POLYTECHNIC</h4>
+  <div class="row mb-4">
+    <div class="col-lg-6 col-md-6">
+      <label class="form-label fw-semibold">Cơ sở nhập học</label>
+      <select class="form-select p-2" ng-model="user.csnh">
+        <option selected value="">Hà Nội</option>
+        <option>Hà Nam</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label fw-semibold">Nguyện vọng thứ nhất</label>
+      <select class="form-select p-2" ng-model="user.nv1">
+        <option selected value="">Chuyên Ngành</option>
+        <option>CNTT</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.nv1==false">
+        Hãy chọn chuyên ngành thứ nhất
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mt-2">
+      <label class="form-label fw-semibold"></label>
+      <select class="form-select p-2">
+        <option selected value="">Ngành</option>
+        <option>LT WEB</option>
+      </select>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label fw-semibold">Nguyện vọng thứ hai</label>
+      <select class="form-select p-2" ng-model="user.nv2">
+        <option selected value="">Chuyên Ngành</option>
+        <option>CNTT</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.nv2==false">
+        Hãy chọn chuyên ngành thứ hai
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mt-2">
+      <label class="form-label fw-semibold"></label>
+      <select class="form-select p-2">
+        <option selected value="">Ngành</option>
+        <option>LT WEB</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-lg-6 col-md-6">
+      <label class="form-label fw-semibold">Năm tốt nghiệp THPT hoặc tương đương</label>
+      <select class="form-select p-2" ng-model="user.namtn">
+        <option selected value="">2023</option>
+        <option>2022</option>
+      </select>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <label class="form-label fw-semibold">Trường tốt nghiệp THPT hoặc tương
+        đương</label>
+      <input type="text" class="form-control p-2" ng-model="user.school" placeholder="Trường">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.school==false">
+        Hãy nhập trường tốt nghiệp THPT hoặc tương đương
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <label class="form-label fw-semibold">Nơi tốt nghiệp</label>
+    <div class="col-lg-4 col-md-6">
+      <select class="form-select p-2" ng-model="user.noitn1">
+        <option selected value="">Chọn tỉnh/thành phố</option>
+        <option>HN</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.noitn1==false">
+        Hãy chọn tỉnh/thành phố
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <select class="form-select p-2" ng-model="user.noitn2">
+        <option selected value="">Quận/Huyện</option>
+        <option>Hoài Đức</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.noitn2==false">
+        Hãy chọn quận/huyện
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <select class="form-select p-2" ng-model="user.noitn3">
+        <option selected value="">Xã/Phường/Thị trấn</option>
+        <option>Yên sở</option>
+      </select>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.noitn3==false">
+        Hãy chọn xã/phường/thị trấn
+      </div>
+    </div>
+  </div>
+  <h4 class="blue mb-4 fw-bolder">THÔNG TIN NHẬN GIẤY BÁO KẾT QUẢ</h4>
+  <div class="row mb-4">
+    <div class="col-lg-6">
+      <label class="form-label fw-semibold">Người nhận</label>
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" value="" ng-model="user.thisinh">
+        <label class="form-check-label gray">
+          Thí Sính
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" ng-model="user.ph">
+        <label class="form-check-label gray">
+          Phụ huynh/Người bảo trợ
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.thisinh==false">
+        Hãy chọn người nhận giấy báo kết quả xét tuyển
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <label class="form-label fw-semibold">Địa chỉ nhận</label>
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" value="" ng-model="user.hk">
+        <label class="form-check-label gray">
+          Địa chỉ hộ khẩu thường trú
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" ng-model="user.khac">
+        <label class="form-check-label gray">
+          Khác
+        </label>
+      </div>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.hk==false">
+        Hãy chọn địa chỉ nhận giấy báo kết quả xét tuyển
+      </div>
+    </div>
+  </div>
+
+  <h4 class="blue mb-4 fw-bolder">TẢI LÊN GIẤY TỜ XÁC THỰC</h4>
+  <div class="row mb-4">
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label fw-semibold">Ảnh CMT/CCCD mặt trước</label><br>
+      <p class="gray">(bắt buộc)</p>
+      <img src="img/cccdmt.png" alt="" class="banner-desktop mb-2">
+      <input type="file" class="" placeholder="(bắt buộc)" ng-model="user.anhmt">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.anhmt==false">
+        Hãy chọn ảnh CMT/CCCD mặt trước
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <label class="form-label fw-semibold">Ảnh CMT/CCCD mặt sau</label><br>
+      <p class="gray">(bắt buộc)</p>
+      <img src="img/cccdms.png" alt="" class="banner-desktop mb-2">
+      <input type="file" class="" placeholder="(bắt buộc)" ng-model="user.anhms">
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.anhms==false">
+        Hãy chọn ảnh CMT/CCCD mặt sau
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <label class="form-label fw-semibold">Bản sao công chứng Bằng tốt nghiệp
+        THPT</label><br>
+      <p class="gray">Hoặc giấy chứng nhận tốt nghiệp tạm thời (không bắt buộc)</p>
+      <img src="img/btn.png" alt="" class="banner-desktop mb-2">
+      <input type="file" class="" placeholder="(bắt buộc)" ng-model="user.anhtn">
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="form-check mb-4">
+      <input class="form-check-input black" type="checkbox" value="" ng-model="user.camdoan">
+      <label class="form-check-label gray">
+        Tôi xin cam đoan những lời khai của tôi trên phiếu đăng ký này là đúng sự thật. Nếu sai tôi hoàn toàn chịu trách
+        nhiệm và nhận xử lý theo Quy chế tuyển sinh cao đẳng hiện hành
+      </label>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.camdoan==false">
+        Bạn chưa đồng ý với cam kết xác nhận thông tin
+      </div>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input black" type="checkbox" value="" ng-model="user.camket">
+      <label class="form-check-label gray">
+        Tôi đã đọc kỹ và cam kết tuân thủ Quy định tài chính của nhà trường
+      </label>
+      <div class="alert alert-danger" role="alert" ng-if="kiemTra.camket==false">
+        Bạn chưa đồng ý với cam kết tài chính
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-dark p-4" ng-click="submit()">GỬI HỒ SƠ ĐĂNG KÝ</button>
+  </div>
+  <table class="container table mt-5">
+    <tr>
+    <th>Id</th>
+    <th>Họ và tên</th>
+    <th>Ngày sinh</th>
+    <th>Giới tính</th>
+    <th>Dân tộc</th>
+    <th>Số CCCD</th>
+    <th>Địa chỉ nhà</th>
+    <th>SĐT</th>
+    <th>Email</th>
+    <th>Hành động</th>
+  </tr>
+  <tr ng-repeat="ds in danhsach">
+    <td>{{ds.id}}</td>
+    <td>{{ds.ten}}</td>
+    <td>{{ds.birth}}</td>
+    <td>{{ds.gender}}</td>
+    <td>{{ds.dantoc}}</td>
+    <td>{{ds.cccd}}</td>
+    <td>{{ds.sonha}}</td>
+    <td>{{ds.phoneSV}}</td>
+    <td>{{ds.email}}</td>
+    <td><button class="btn btn-secondary" ng-click="onEdit(ds.id)">Edit</button></td>
+  </tr>
+</table>
+</form>

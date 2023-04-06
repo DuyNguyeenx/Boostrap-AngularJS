@@ -1,4 +1,3 @@
-
    <!-- Page content -->
 	<div class="container mb-5">
         <div class="row mt-5">
@@ -7,67 +6,100 @@
             <hr>
             <form>
                 <div class="mb-3">
-                    <label for="checkin" class="form-label">FullName (Họ và tên)</label>
-                    <input type="text" class="form-control" id="checkin" name="fullname" required>
+                    <label class="form-label">FullName (Họ và tên)</label>
+                    <input type="text" class="form-control" ng-model="user.name" required>
+                    <div class="alert alert-danger" role="alert" ng-if="kiemTra.name==true">
+                      Vui lòng nhập họ và tên!
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="checkin" class="form-label">CCCD</label>
-                    <input type="text" class="form-control" id="checkin" name="cccd" required>
+                    <label class="form-label">CCCD</label>
+                    <input type="text" class="form-control" ng-model="user.cccd" required>
+                    <div class="alert alert-danger" role="alert" ng-if="kiemTra.cccd==true">
+                      {{cccd}}
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="checkin" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="checkin" name="email" required>
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" ng-model="user.email" required>
+                    <div class="alert alert-danger" role="alert" ng-if="kiemTra.email==true" >
+                      {{email}}
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="checkin" class="form-label mr">Gender (Giới tính)</label>
+                    <label class="form-label mr">Gender (Giới tính)</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Boy (Nam)</label>
+                        <input class="form-check-input" type="radio" ng-model="user.gender" value="Nam">
+                        <label class="form-check-label">Boy (Nam)</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Girl (Nữ)</label>
+                        <input class="form-check-input" type="radio" ng-model="user.gender" value="Nữ">
+                        <label class="form-check-label">Girl (Nữ)</label>
+                      </div>
+                      <div class="alert alert-danger" role="alert" ng-if="kiemTra.gender==true">
+                        Vui lòng chọn giới tính!
                       </div>
                   </div>
                   <div class="mb-3">
-                    <label for="checkin" class="form-label">Phone (Số điện thoại)</label>
-                    <input type="text" class="form-control" id="checkin" name="phone" required>
+                    <label class="form-label">Phone (Số điện thoại)</label>
+                    <input type="tel" class="form-control" ng-model="user.phone" required>
+                    <div class="alert alert-danger" role="alert" ng-if="kiemTra.phone==true">
+                      {{phone}}
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="checkin" class="form-label">Date of birth (Ngày sinh)</label>
-                    <input type="date" class="form-control" id="checkin" name="checkin" required>
+                    <label class="form-label">Date of birth (Ngày sinh)</label>
+                    <input type="date" class="form-control" ng-model="user.birth" required>
+                    <div class="alert alert-danger" role="alert" ng-if="kiemTra.birth==true">
+                      Vui lòng nhập ngày sinh!
+                    </div>
                   </div>
               <div class="mb-3">
-                <label for="checkin" class="form-label">Check-In Date (Ngày nhận phòng)</label>
-                <input type="date" class="form-control" id="checkin" name="checkin" required>
+                <label class="form-label">Check-In Date (Ngày nhận phòng)</label>
+                <input type="date" class="form-control" ng-model="user.checkin" required>
+                <div class="alert alert-danger" role="alert" ng-if="kiemTra.checkin==true">
+                  Vui lòng chọn ngày nhận phòng!
+                </div>
               </div>
               <div class="mb-3">
                 <label for="checkout" class="form-label">Check-Out Date (Ngày trả phòng)</label>
-                <input type="date" class="form-control" id="checkout" name="checkout" required>
+                <input type="date" class="form-control" ng-model="user.checkout" required>
+                <div class="alert alert-danger" role="alert" ng-if="kiemTra.checkout==true">
+                  Vui lòng chọn ngày trả phòng!
+                </div>
               </div>
               <div class="mb-3">
                 <label for="guests" class="form-label">Number of Guests (Số lượng khách)</label>
-                <input type="number" class="form-control" id="guests" name="guests" min="1" max="10" required>
+                <input type="number" class="form-control" min="1" max="10" ng-model="user.guest" required>
+                <div class="alert alert-danger" role="alert" ng-if="kiemTra.guest==true">
+                  Vui lòng nhập số lượng khách!
+                </div>
               </div>
               <div class="mb-3">
-                <label for="roomtype" class="form-label">Select Room (Chọn phòng)</label>
-                <select class="form-control" id="roomtype" name="roomtype" required>
-                  <option value="">Select a Room</option>
-                  <option value="standard">Standard (Tiêu Chuẩn)</option>
-                  <option value="deluxe">Deluxe (Sang trọng)</option>
-                  <option value="suite">Suite (Thượng hạng)</option>
+                <label class="form-label">Select Room (Chọn phòng)</label>
+                <select class="form-control" required ng-model="user.room">
+                  <option value="" selected>Select a Room</option>
+                  <option value="Standard (Tiêu Chuẩn)">Standard (Tiêu Chuẩn)</option>
+                  <option value="Deluxe (Sang trọng)">Deluxe (Sang trọng)</option>
+                  <option value="Suite (Thượng hạng)">Suite (Thượng hạng)</option>
                 </select>
+                <div class="alert alert-danger" role="alert" ng-if="kiemTra.room==true">
+                  Vui lòng chọn phòng!
+                </div>
               </div>
               <div class="mb-3">
-                <label for="roomtype" class="form-label">Hình thức thanh toán</label>
-                <select class="form-control" id="roomtype" name="roomtype" required>
-                  <option value="">Tiền mặt</option>
-                  <option value="standard">Thanh toán bằng thẻ ngân hàng</option>
+                <label class="form-label">Hình thức thanh toán</label>
+                <select class="form-control" ng-model="user.pay">
+                  <option value="" selected>Select a Payments</option>
+                  <option value="Tiền mặt" selected>Tiền mặt</option>
+                  <option value="Thanh toán bằng thẻ ngân hàng">Thanh toán bằng thẻ ngân hàng</option>
                 </select>
+                <div class="alert alert-danger" role="alert" ng-if="kiemTra.pay==true">
+                  Vui lòng chọn hình thức thanh toán!
+                </div>
               </div>
               <button type="reset" class="btn btn-danger mr">Reset</button>
-
-              <button type="submit" class="btn btn-primary">Book Now</button>
+              <button class="btn btn-primary" ng-click="submit()">Book Now</button>
             </form>
           </div>
         </div>

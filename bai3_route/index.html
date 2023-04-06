@@ -8,20 +8,12 @@
   <title>Document</title>
   <script src="libs/angular.min.js"></script>
   <script src="libs/angular-route.min.js"></script>
-  <!-- <script src="controllers/TrangChuController.js"></script> -->
-  <!-- <script src="controllers/Lab5Controller.js"></script> -->
-  <!-- <script src="controllers/Bai1Controller.js"></script>
-    <script src="controllers/Bai2Controller.js"></script>
-    <script src="controllers/Bai3Controller.js"></script>
-    <script src="controllers/Bai4Controller.js"></script>
-    <script src="controllers/Bai5Controller.js"></script> -->
+   <script src="controllers/TrangChuController.js"></script> 
+   <script src="controllers/Lab5Controller.js"></script> 
   <script src="controllers/GioiThieuController.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" /> -->
-  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
 </head>
 
 <body class="container">
@@ -41,26 +33,11 @@
             <a class="nav-link fs-4" href="#!/detail/:Nhan Vien">Nhan Vien</a>
             <a class="nav-link fs-4" href="#!/detail/:Can Bo">Can Bo</a>
             <a class="nav-link fs-4" href="#!/detail/:Quan Ly">Quan Ly</a>
-            <a class="nav-link fs-4" href="#!/gioithieu/:abc">Gioi thieu</a>
+            <a class="nav-link fs-4" href="#!/">Gioi thieu</a>
           </div>
         </div>
       </div>
     </nav>
-
-    <!-- <nav>
-            <ul> -->
-    <!-- <li><a href="#!/trangchu">Trang chủ</a></li>
-                <li><a href="#!/gioithieu/:abc">Nhan Vien</a></li>
-                <li><a href="#!/gioithieu/:abc">Can Bo</a></li>
-                <li><a href="#!/gioithieu/:abc">Quan Ly</a></li> -->
-    <!-- <li><a href="#!/gioithieu/:abc">Gioi thieu</a></li> -->
-    <!-- <li><a href="#!/bai1">Lab 1</a></li>
-                <li><a href="#!/bai2">Lab 2</a></li>
-                <li><a href="#!/bai3">Lab 3</a></li>
-                <li><a href="#!/bai4">Lab 4</a></li>
-                <li><a href="#!/bai5">Lab 5</a></li> -->
-    <!-- </ul>
-        </nav> -->
     <main>
       <!-- định nghĩa khu vực mà view sẽ được render ra -->
       <div ng-view>
@@ -81,31 +58,11 @@
 </body>
 <script>
   angular.module('app-route', ['ngRoute']).config(function ($routeProvider) {
-    // $routeProvider.when('/detail/:name',{ //ten route la trang chu
-    //     templateUrl : 'views/lab5.html',
-    //     controller: Lab5Controller
-    // })
-    // .when('/bai1',{ //ten route la trang chu
-    //     templateUrl : 'views/bai1.html',
-    //     controller: Bai1Controller
-    // })
-    // .when('/bai2',{ //ten route la trang chu
-    //     templateUrl : 'views/bai2.html',
-    //     controller: Bai2Controller
-    // })
-    // .when('/bai3',{ //ten route la trang chu
-    //     templateUrl : 'views/bai3.html',
-    //     controller: Bai3Controller
-    // })
-    // .when('/bai4',{ //ten route la trang chu
-    //     templateUrl : 'views/bai4.html',
-    //     controller: Bai4Controller
-    // })
-    // .when('/bai5',{ //ten route la trang chu
-    //     templateUrl : 'views/bai5.html',
-    //     controller: Bai5Controller
-    // })
-    $routeProvider.when('/gioithieu/:name', { //ten route la trang chu
+    $routeProvider.when('/detail/:name',{ //ten route la trang chu
+        templateUrl : 'views/lab5.html',
+        controller: Lab5Controller
+    })
+    .when('/', { //ten route la trang chu
       templateUrl: 'views/gioithieu.html',
       controller: GioiThieuController
     })

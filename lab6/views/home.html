@@ -1,0 +1,55 @@
+<div class="mb-3">
+    <label class="form-label">Ten san pham</label>
+    <input type="text" class="form-control" ng-model="sp.ten">
+    <div class="alert alert-danger" role="alert" ng-if="kiemTra.ten==false">
+      Vui lòng nhập tên!
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Gia</label>
+    <input type="number" class="form-control" ng-model="sp.gia">
+    <div class="alert alert-danger" role="alert" ng-if="kiemTra.gia==false">
+      {{gia}}
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Mau</label>
+    <input type="text" class="form-control" ng-model="sp.mau">
+    <div class="alert alert-danger" role="alert" ng-if="kiemTra.mau==false">
+      Vui lòng nhập màu!
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Trang Thai</label>
+    <select class="form-select" ng-model="sp.tt">
+      <option selected value="Kích hoạt">Kích hoạt</option>
+      <option value="Không kích hoạt">Không kích hoạt</option>
+    </select>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-primary text-center mb-2 px-5" ng-click="submit()">Update</button>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Ten</th>
+        <th>Gia</th>
+        <th>Mau</th>
+        <th>Trang thai</th>
+        <th>action</th>
+      </tr> 
+    </thead>
+    <tbody>
+      <tr ng-repeat="ds in sanpham">
+        <td>{{ds.id}}</td>
+        <td>{{ds.ten}}</td>
+        <td>{{ds.gia}}</td>
+        <td>{{ds.mau}}</td>
+        <td>{{ds.tt}}</td>
+        <td><button class="btn btn-secondary" ng-click="onEdit(ds.id)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

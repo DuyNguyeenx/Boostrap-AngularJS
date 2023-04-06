@@ -18,38 +18,44 @@ window.Lab5Controller = function($scope,$routeParams) {
         }if(!$scope.user || !$scope.user.work ) {
             $scope.kiemTra.work = true;
         }
+        if($scope.user.gender == "nam"){
+            $scope.user.gender = 'Ong';
+        }else {
+            $scope.user.gender = 'Ba';
+        }
         // nhan vien
         if($routeParams.name == ":Nhan Vien" && $scope.user.step == "bac1"){
             const totalLuong  = $scope.user.work * 700;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"]+ ' '+$scope.user.name+' là '+$routeParams.name+' bậc 1 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }else if($routeParams.name == ":Nhan Vien" && $scope.user.step == "bac2"){
             const totalLuong  = $scope.user.work * 1400;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"] + ' '+$scope.user.name+' là '+$routeParams.name+' bậc 2 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }else if($routeParams.name == ":Nhan Vien" && $scope.user.step == "bac3"){
             const totalLuong  = $scope.user.work * 2100;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"] + ' '+$scope.user.name+' là '+$routeParams.name+' bậc 3 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }
         //can bo
         if($routeParams.name == ":Can Bo" && $scope.user.step == "bac1"){
             const totalLuong  = $scope.user.work * 1000;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"]+ ' '+$scope.user.name+' là '+$routeParams.name+' bậc 1 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }else if($routeParams.name == ":Can Bo" && $scope.user.step == "bac2"){
             const totalLuong  = $scope.user.work * 1700;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"] + ' '+$scope.user.name+' là '+$routeParams.name+' bậc 2 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }else if($routeParams.name == ":Can Bo" && $scope.user.step == "bac3"){
             const totalLuong  = $scope.user.work * 2400;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"] + ' '+$scope.user.name+' là '+$routeParams.name+' bậc 3 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }
         // quan ly
         if($routeParams.name == ":Quan Ly" && $scope.user.step == "bac1"){
             const totalLuong  = $scope.user.work * 1300;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"]+ ' '+$scope.user.name+' là '+$routeParams.name+' bậc 1 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }else if($routeParams.name == ":Quan Ly" && $scope.user.step == "bac2"){
             const totalLuong  = $scope.user.work * 2000;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"] + ' '+$scope.user.name+' là '+$routeParams.name+' bậc 2 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }else if($routeParams.name == ":Quan Ly" && $scope.user.step == "bac3"){
             const totalLuong  = $scope.user.work * 2700;
-            $scope.traLoi =[($scope.user.gender == "nam") ? "Ông" : "Bà"] + ' '+$scope.user.name+' là '+$routeParams.name+' bậc 3 được tri trả  '+totalLuong+' tiền viện!';
+            $scope.traLoi = $scope.user.gender + ' '+$scope.user.name+' la '+$scope.chucVu+' '+$scope.user.step+' duoc tri tra '+totalLuong+' tien vien!';
         }
+        
     }
-}
+} 

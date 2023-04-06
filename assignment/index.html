@@ -14,10 +14,10 @@
     <script src="controllers/BookingController.js"></script>
     <script src="controllers/ContactController.js"></script>
     <script src="controllers/SignInController.js"></script>
+    <script src="controllers/listCustomerController.js"></script>
     <link rel="stylesheet" href="css/index.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </head>
 
 <body ng-app="app-route">
@@ -40,6 +40,9 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#!/contact">Liên hệ</a>
 					</li>
+          <!-- <li class="nav-item">
+						<a class="nav-link" href="#!/list">List</a>
+					</li> -->
 				</ul>
 			</div>
 			<div class="collapse navbar-collapse " id="navbarNav">
@@ -152,6 +155,10 @@
         .when('/signin',{ //ten route la trang chu
             templateUrl : 'views/signin.html',
             controller: SignInController
+        })
+        .when('/list',{ //ten route la trang chu
+            templateUrl : 'views/listCustomer.html',
+            controller: listCustomerController
         })
     })
 </script>

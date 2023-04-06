@@ -1,0 +1,3 @@
+window.pageController = function($scope) {
+    
+}

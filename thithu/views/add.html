@@ -1,0 +1,26 @@
+<form>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" ng-model="sp.name">
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.name==true">
+          Vui lòng nhập tên!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="number" class="form-control" ng-model="sp.price">
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.price==true">
+          {{gia}}
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Category Name</label>
+        <input type="text" class="form-control" ng-model="sp.cate">
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.cate==true">
+          Vui lòng nhập Category Name!
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary text-center mb-2 px-5" ng-click="submit()">Create</button>
+    </div>
+</form>
