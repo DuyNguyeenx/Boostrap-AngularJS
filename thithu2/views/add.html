@@ -1,0 +1,50 @@
+<form>
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Tên</label>
+        <div class="col-sm-10">
+          <input type="text"  class="form-control" ng-model="user.name">
+        </div>
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.name==true">
+          Vui lòng nhập tên!
+        </div>
+      </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Giới tính</label>
+        <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" ng-model="user.gender" value="Nam">
+                <label class="form-check-label">Nam</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" ng-model="user.gender" value="Nữ">
+                <label class="form-check-label">Nữ</label>
+              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" ng-if="kiemTra.gender==true">
+              Vui lòng nhập tên!
+            </div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label  class="col-sm-2 col-form-label">Địa chỉ</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" ng-model="user.address">
+        </div>
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.address==true">
+          Vui lòng nhập tên!
+        </div>
+      </div>
+      </div>
+      <div class="mb-3 row">
+        <label  class="col-sm-2 col-form-label">Tuổi</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" ng-model="user.age">
+        </div>
+        <div class="alert alert-danger" role="alert" ng-if="kiemTra.age==true">
+          Vui lòng nhập tên!
+        </div>
+      </div>
+      </div>
+      <button type="button" class="btn btn-primary" ng-click="submit()">Add</button>
+</form>

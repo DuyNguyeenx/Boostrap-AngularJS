@@ -1,105 +1,34 @@
 {
-  "posts": [
+  "profile": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "duy",
+      "gender": "Nam",
+      "address": "HAN!",
+      "age": 20
     },
     {
-      "id": 2,
-      "title": "nana",
-      "author": "nana"
+      "name": "nam dòe",
+      "gender": "Nam",
+      "address": "hoài đức-hn",
+      "age": 11,
+      "id": 2
     },
     {
-      "ten": "wwwww",
-      "tuoi": "wwwuuuww",
+      "name": "hoa híp",
+      "gender": "Nữ",
+      "address": "yên sở",
+      "age": 13,
       "id": 3
     },
     {
-      "id": 4,
-      "ten": "4444",
-      "tuoi": "3333"
-    },
-    {
-      "id": 5,
-      "ten": "2222",
-      "tuoi": "2222"
-    },
-    {
-      "ten": "wwtttaâ",
-      "tuoi": "wwwttttaaa",
-      "id": 6
-    },
-    {
-      "ten": "2222",
-      "tuoi": "222",
-      "id": 7
-    },
-    {
-      "ten": "222",
-      "tuoi": "222",
-      "id": 8
-    },
-    {
-      "ten": "999",
-      "tuoi": "1999",
-      "id": 9
-    },
-    {
-      "ten": "222",
-      "tuoi": "222",
-      "id": 10
-    },
-    {
-      "ten": "222555",
-      "id": 11
-    },
-    {
-      "ten": "eeee",
-      "tuoi": "eee",
-      "id": 12
-    },
-    {
-      "ten": "ggg",
-      "tuoi": "ggg",
-      "id": 13
-    },
-    {
-      "ten": "hhh",
-      "tuoi": "jjjj",
-      "id": 14
-    },
-    {
-      "ten": "hhhh",
-      "tuoi": "hhh",
-      "id": 15
-    },
-    {
-      "ten": "kkk",
-      "tuoi": "ggg",
-      "id": 16
-    },
-    {
-      "ten": "ukm",
-      "tuoi": "ukm",
-      "id": 17
-    },
-    {
-      "ten": "nanâ",
-      "tuoi": "nana",
-      "id": 18
+      "name": "nghes",
+      "gender": "Nam",
+      "address": "yenso",
+      "age": 2,
+      "id": 4
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "products": [
     {
       "id": 1,
@@ -150,19 +79,6 @@
   "customer": [
     {
       "id": 1,
-      "name": "Tee ysl",
-      "cccd": "2647812",
-      "email": "duy@gmail.com",
-      "gender": "nam",
-      "phone": "0964678184",
-      "birth": "2003-4-6",
-      "checkin": "2023-4-6",
-      "checkout": "2023-4-1",
-      "guest": 6,
-      "room": "Standard (Tiêu Chuẩn)",
-      "pay": "Tiền mặt"
-    },
-    {
       "name": "duy",
       "cccd": "4466122365",
       "email": "duyng@gmail.com",
@@ -173,8 +89,7 @@
       "checkout": "2023-04-05T17:00:00.000Z",
       "guest": 2,
       "room": "standard",
-      "pay": "standard",
-      "id": 2
+      "pay": "standard"
     },
     {
       "name": "Cao Nam",
@@ -188,7 +103,49 @@
       "guest": 6,
       "room": "Standard (Tiêu Chuẩn)",
       "pay": "Tiền mặt",
+      "id": 2
+    },
+    {
+      "name": "Thang",
+      "cccd": "1234561233",
+      "email": "thang@gmail.com",
+      "gender": "Nam",
+      "phone": "0384562789",
+      "birth": "2006-03-11T17:00:00.000Z",
+      "checkin": "2023-05-10T17:00:00.000Z",
+      "checkout": "2023-05-14T17:00:00.000Z",
+      "guest": 6,
+      "room": "Suite (Thượng hạng)",
+      "pay": "Tiền mặt",
       "id": 3
+    },
+    {
+      "name": "duong lgbt",
+      "cccd": "456821364",
+      "email": "duong@gmail.com",
+      "gender": "Nữ",
+      "phone": "0976123456",
+      "birth": "2023-04-06T17:00:00.000Z",
+      "checkin": "2023-04-06T17:00:00.000Z",
+      "checkout": "2023-04-06T17:00:00.000Z",
+      "guest": 6,
+      "room": "Deluxe (Sang trọng)",
+      "pay": "Tiền mặt",
+      "id": 4
+    },
+    {
+      "name": "duyq",
+      "cccd": "4564987912",
+      "email": "ddd@gmail.com",
+      "gender": "Nam",
+      "phone": "0965789456",
+      "birth": "2023-04-06T17:00:00.000Z",
+      "checkin": "2023-04-06T17:00:00.000Z",
+      "checkout": "2023-04-06T17:00:00.000Z",
+      "guest": 23,
+      "room": "Deluxe (Sang trọng)",
+      "pay": "Tiền mặt",
+      "id": 5
     }
   ]
 }

@@ -1,0 +1,20 @@
+<h2 class="text-center">Quản lý tác giả</h2>
+<button type="button" class="btn btn-secondary" ng-click="add()">add</button>
+<table class="table" >
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Gioi tính</th>
+        <th scope="col">Địa Chỉ</th>
+        <th scope="col">Tuổi</th>
+        <th scope="col">Action</th>
+    </tr>
+    <tr ng-repeat="ds in list">
+        <th scope="row">{{ds.id}}</th>
+        <th>{{ds.name}}</th>
+        <th>{{ds.gender}}</th>
+        <th>{{ds.address}}</th>
+        <th>{{ds.age}}</th>
+        <th><button type="button" class="btn btn-secondary" ng-click="onEdit(ds.id)">Sửa</button></th>
+    </tr>
+</table>

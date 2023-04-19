@@ -34,6 +34,7 @@
             <a class="nav-link fs-4" href="#!/detail/:Can Bo">Can Bo</a>
             <a class="nav-link fs-4" href="#!/detail/:Quan Ly">Quan Ly</a>
             <a class="nav-link fs-4" href="#!/">Gioi thieu</a>
+            <a class="nav-link fs-4" href="#!/trang-chu/">trang chu</a>
           </div>
         </div>
       </div>
@@ -42,7 +43,7 @@
       <!-- định nghĩa khu vực mà view sẽ được render ra -->
       <div ng-view>
 
-      </div>
+      </div>  
       <footer>
 
       </footer>
@@ -66,6 +67,10 @@
       templateUrl: 'views/gioithieu.html',
       controller: GioiThieuController
     })
+    .when('/trang-chu/:id/page',{ // tên route là trang-chu
+            templateUrl : 'views/trangchu.html', //đường dẫn đến view
+            controller: TrangChuController
+        })
   })
 </script>
 

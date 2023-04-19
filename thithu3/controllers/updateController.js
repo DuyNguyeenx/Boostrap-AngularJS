@@ -42,7 +42,7 @@ window.updateController = function($scope,$location,$http,$routeParams) {
           }
           if($scope.sp.name == false && $scope.sp.price == false && $scope.sp.cate == false) {
             $http.put(api,newItem).then(function (response) {
-                alert("Sửa thành công");
+                // alert("Sửa thành công");
                 $location.path("/");
             })
           }
